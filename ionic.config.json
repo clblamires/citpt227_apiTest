@@ -1,5 +1,7 @@
 {
   "name": "apiTest",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

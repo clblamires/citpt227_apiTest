@@ -1,9 +1,32 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Three
+      Employees
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+
+
+  <ion-card *ngFor="let e of employees">
+    <ion-card-header>
+      <ion-card-title>
+        {{ e.firstname }} {{ e.lastname }}
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ul>
+        <li>
+          Department: {{ e.department_id }}
+        </li>
+        <li>
+          Email: {{ e.email }}
+        </li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>

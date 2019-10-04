@@ -1,9 +1,12 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Two
+      {{ city }}, {{ state }}
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content class="ion-padding">
+  <ion-img src="{{ icon }}" class="api-icon"></ion-img>
+  <h1>{{ temp }}&deg; - {{ description }}</h1>
+</ion-content>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EmployeeService } from '../employee.service';
 
 @Component({
   selector: 'app-tab3',
@@ -7,6 +8,13 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
-  constructor() {}
+  employees: any;
+
+  constructor( public employeeService: EmployeeService ) {
+    this.employeeService.getEmployees().subscribe( data => {
+      console.log(data);
+      this.employees = data.records;
+    })
+  }
 
 }
